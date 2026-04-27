@@ -7,7 +7,9 @@ import DashboardLayout from '../components/dashboardlayout/DashboardLayout.jsx';
 import Login from '../components/login/Login.jsx';
 import Home from '../components/home/Home.jsx';
 import StudentDashboard from '../components/student-dashboard/StudentDashboard.jsx';
-import TeacherDashboard from '../components/teacher-dashboard/TeacherDashboard.jsx';
+ 
+import TeacherSlots from '../components/teacherSlots/TeacherSlots.jsx';
+import CreateSlot from '../components/createSlot/CreateSlot.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,15 +40,21 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Dashboard />,
+        path: "teacher",
+        element: <Dashboard />,  
       },
+   
       {
-        path: "student",  
+        path: "student",
         element: <StudentDashboard />,
       },
       {
-        path: "teacher",  
-        element: <TeacherDashboard />,
+        path: "teacher-slots",  
+        element: <TeacherSlots />,
+      },
+      {
+        path: "create-slot",  
+        element: <CreateSlot />,
       },
     ],
   },
