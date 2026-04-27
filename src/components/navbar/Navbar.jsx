@@ -46,7 +46,7 @@ const Navbar = () => {
                   to={
                     user.role === "teacher"
                       ? "/dashboard/teacher"
-                      : "/dashboard/student"
+                      : "/dashboard/student-slots"
                   }
                 >
                   Dashboard

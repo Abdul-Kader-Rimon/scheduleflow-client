@@ -89,7 +89,7 @@ const DashboardLayout = () => {
 
           {role === "student" && (
             <>
-              <NavLink to="/dashboard/student" className={navItemStyles}>
+              <NavLink to="/dashboard/student-slots" className={navItemStyles}>
                 Available Slots
               </NavLink>
               <NavLink to="/dashboard/my-bookings" className={navItemStyles}>
@@ -106,8 +106,11 @@ const DashboardLayout = () => {
               <NavLink to="/dashboard/teacher-slots" className={navItemStyles}>
                 My Created Slots
               </NavLink>
+              <NavLink to="/dashboard/teacher-booked-slots" className={navItemStyles}>
+              Booked Slots
+              </NavLink>
               <NavLink to="/dashboard/create-slot" className={navItemStyles}>
-                + Create New Slot
+                Create New Slot
               </NavLink>
             
             </>

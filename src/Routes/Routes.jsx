@@ -6,10 +6,13 @@ import Signup from '../components/signup/signup.jsx';
 import DashboardLayout from '../components/dashboardlayout/DashboardLayout.jsx';
 import Login from '../components/login/Login.jsx';
 import Home from '../components/home/Home.jsx';
-import StudentDashboard from '../components/student-dashboard/StudentDashboard.jsx';
+ 
  
 import TeacherSlots from '../components/teacherSlots/TeacherSlots.jsx';
 import CreateSlot from '../components/createSlot/CreateSlot.jsx';
+import StudentSlots from '../components/studentview/StudentSlots.jsx';
+import TeacherBookedSlots from '../components/teacherbookedslots/TeacherBookedSlots.jsx';
+import MyBookings from '../components/studentbookingslot/Mybooking.jsx';
 
 const router = createBrowserRouter([
   {
@@ -45,8 +48,16 @@ const router = createBrowserRouter([
       },
    
       {
-        path: "student",
-        element: <StudentDashboard />,
+        path: "student-slots",
+        element: <StudentSlots />,
+      },
+      {
+        path: "my-bookings",
+        element: <MyBookings />,
+      },
+      {
+        path: "teacher-booked-slots",  
+        element: <TeacherBookedSlots />,
       },
       {
         path: "teacher-slots",  
