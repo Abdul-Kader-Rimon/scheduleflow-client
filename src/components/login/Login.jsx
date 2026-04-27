@@ -22,7 +22,7 @@ const Login = () => {
     
     setForm(credentials);
     toast.success(`${role.charAt(0).toUpperCase() + role.slice(1)} credentials filled!`, {
-        icon: '📝',
+        
     });
   };
 
