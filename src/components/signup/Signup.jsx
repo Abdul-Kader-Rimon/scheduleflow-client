@@ -46,7 +46,7 @@ const Signup = () => {
 
         <form onSubmit={handleSubmit} className="space-y-4">
 
-          {/* Name */}
+          
           <input
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             name="name"
@@ -56,7 +56,7 @@ const Signup = () => {
             required
           />
 
-          {/* Email */}
+           
           <input
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             name="email"
@@ -66,7 +66,7 @@ const Signup = () => {
             required
           />
 
-          {/* Password */}
+          
           <input
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             type="password"
@@ -77,7 +77,7 @@ const Signup = () => {
             required
           />
 
-          {/* Role */}
+          
           <select
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             name="role"
@@ -88,7 +88,7 @@ const Signup = () => {
             <option value="teacher">Teacher</option>
           </select>
 
-          {/* Button */}
+           
           <button
             type="submit"
             className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg font-semibold transition duration-300"
