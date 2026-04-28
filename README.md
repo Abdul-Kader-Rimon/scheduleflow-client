@@ -1,16 +1,72 @@
-# React + Vite
+📅  ScheduleFlow
+Mini Class Scheduling & Dashboard System
+Internship Assignment Submission
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌐 Live Site
+scheduleflow-client-1.vercel.app	💻 Frontend
+github: scheduleflow-client	🛠️ Backend
+github: scheduleflow-server	⚙️ API
+scheduleflow-server.vercel.app
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+📌  Project Overview
+ScheduleFlow is a full-stack web application where teachers can create and manage 15-minute class slots, and students can browse and book those slots in real time.
 
-## React Compiler
+Users register with their name, email, password and select their role (Teacher or Student) during signup. The role is stored in MongoDB and used to show the correct dashboard after login. Passwords are securely hashed using bcrypt.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+🛠️  Technology Stack
+Layer	Technology	Purpose
+Frontend	React.js + Vite	UI & client-side routing
+Styling	Tailwind CSS	Responsive design
+Backend	Node.js + Express.js	REST API server
+Database	MongoDB + Mongoose	Data persistence
+Auth	bcrypt + Role-based	Secure signup & login
+Deployment	Vercel	Live hosting
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+✅  What I Implemented
+👨‍🏫  Teacher Dashboard
+●	Displays teacher name and total number of slots created
+●	Add new 15-minute time slots by choosing date and time
+●	View all created slots with status: Available or Booked
+●	Prevents past time slots from being added
+●	Prevents overlapping slots automatically
+
+👩‍🎓  Student View
+●	See all available (unbooked) slots in a clean list
+●	Book any slot with a single click
+●	Slot status instantly changes to Booked after reservation
+
+🔐  Auth & Role System
+●	User registers with name, email, password and selects role: Teacher or Student
+●	Role is saved in MongoDB and used to direct user to the correct dashboard
+●	Passwords are hashed with bcrypt before storing — never saved as plain text
+●	Login checks credentials and role, then shows Teacher dashboard or Student view accordingly
+
+🧠  Slot Conflict Logic
+●	Every slot is exactly 15 minutes long
+●	On slot creation, server checks all existing slots for time overlap
+●	New slot is rejected if it conflicts with any existing slot window
+●	Both client and server validate that past date/time cannot be used
+🔑  Demo Login Credentials
+You can log in with these pre-created accounts or register a new one and choose your role during signup.
+
+👨‍🏫  Teacher Account
+Email:      teacher@demo.com
+Password:  12345
+
+👩‍🎓  Student Account
+Email:      student@demo.com
+Password:  12345
+
+
+🔗  Live Links
+
+🌐  Live Application	https://scheduleflow-client-1.vercel.app
+
+💻  Frontend GitHub	https://github.com/Abdul-Kader-Rimon/scheduleflow-client
+
+🛠️  Backend GitHub	https://github.com/Abdul-Kader-Rimon/scheduleflow-server
+
+⚙️  Backend API	https://scheduleflow-server.vercel.app
