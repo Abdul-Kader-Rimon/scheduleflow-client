@@ -13,6 +13,7 @@ import CreateSlot from '../components/createSlot/CreateSlot.jsx';
 import StudentSlots from '../components/studentview/StudentSlots.jsx';
 import TeacherBookedSlots from '../components/teacherbookedslots/TeacherBookedSlots.jsx';
 import MyBookings from '../components/studentbookingslot/Mybooking.jsx';
+import NotFound from '../components/notfound/NotFound.jsx';
 
 const router = createBrowserRouter([
   {
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
         element: <CreateSlot />,
       },
     ],
+  },
+    {
+    path: '*',
+    element: <NotFound />,
   },
 ]);
 
