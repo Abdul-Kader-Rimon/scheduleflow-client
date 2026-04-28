@@ -43,20 +43,25 @@ ScheduleFlow provides a streamlined experience for educational scheduling. Key h
 ## ✅ Key Features
 
 ### 👨‍🏫 Teacher Dashboard
-* **Statistics:** View teacher name and total slots created.
-* **Slot Management:** Create 15-minute slots by selecting date and time.
-* **Smart Validation:** Prevents past-time slots and automatic **overlap detection**.
-* **Status Tracking:** Monitor slots labeled as *Available* or *Booked*.
+* **Displays teacher name and total number of slots created
+* **Add new 15-minute time slots by choosing date and time
+* **View all created slots with status: Available or Booked
+* **Prevents past time slots from being added
+* **Prevents overlapping slots automatically
+
 
 ### 👩‍🎓 Student View
-* **Browse:** A clean list of all available (unbooked) slots.
-* **One-Click Booking:** Reserve a session instantly.
-* **Live Updates:** Visual feedback as slot status changes upon reservation.
+* **See all available (unbooked) slots in a clean list
+* **Book any slot with a single click
+* **Slot status instantly changes to Booked after reservation
+
 
 ### 🔐 Authentication System
-* Secure registration with role selection (Teacher/Student).
-* Credentials verification during login to redirect to the appropriate dashboard.
-* Passwords are never stored in plain text.
+* **User registers with name, email, password and selects role: Teacher or Student
+* **Role is saved in MongoDB and used to direct user to the correct dashboard
+* **Passwords are hashed with bcrypt before storing — never saved as plain text
+* **Login checks credentials and role, then shows Teacher dashboard or Student view accordingly
+
 
 ---
 
