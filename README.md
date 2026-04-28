@@ -1,76 +1,84 @@
-📅  ScheduleFlow
+# 📅 ScheduleFlow
 
-Mini Class Scheduling & Dashboard System
+### **Mini Class Scheduling & Dashboard System**
 
-🌐 Live Site
-scheduleflow-client-1.vercel.app	💻 Frontend
+ScheduleFlow is a full-stack web application designed for seamless class management. Teachers can create and manage precise 15-minute class slots, while students can browse and book available slots in real-time.
 
-github: scheduleflow-client	🛠️ Backend
+---
 
-github: scheduleflow-server	⚙️ API
+## 🔗 Quick Links
 
-scheduleflow-server.vercel.app
+| Item | Link |
+| :--- | :--- |
+| 🌐 **Live Application** | [View Live Site](https://scheduleflow-client-1.vercel.app) |
+| 💻 **Frontend GitHub** | [Frontend Repository](https://github.com/Abdul-Kader-Rimon/scheduleflow-client) |
+| 🛠️ **Backend GitHub** | [Backend Repository](https://github.com/Abdul-Kader-Rimon/scheduleflow-server) |
+| ⚙️ **API Documentation** | [Backend API](https://scheduleflow-server.vercel.app) |
 
+---
 
+## 📌 Project Overview
 
-📌  Project Overview
-ScheduleFlow is a full-stack web application where teachers can create and manage 15-minute class slots, and students can browse and book those slots in real time.
+ScheduleFlow provides a streamlined experience for educational scheduling. Key highlights include:
+* **Role-Based Access:** Dedicated dashboards for Teachers and Students.
+* **Real-time Booking:** Instant status updates from 'Available' to 'Booked'.
+* **Security:** Robust authentication with `bcrypt` password hashing.
+* **Conflict Prevention:** Intelligent logic to prevent overlapping or past-date schedules.
 
-Users register with their name, email, password and select their role (Teacher or Student) during signup. The role is stored in MongoDB and used to show the correct dashboard after login. Passwords are securely hashed using bcrypt.
+---
 
+## 🛠️ Technology Stack
 
-🛠️  Technology Stack
-Layer	Technology	Purpose
-Frontend	React.js + Vite	UI & client-side routing
-Styling	Tailwind CSS	Responsive design
-Backend	Node.js + Express.js	REST API server
-Database	MongoDB + Mongoose	Data persistence
-Auth	bcrypt + Role-based	Secure signup & login
-Deployment	Vercel	Live hosting
+| Layer | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Frontend** | React.js + Vite | High-performance UI & Client Routing |
+| **Styling** | Tailwind CSS | Modern, Responsive Design |
+| **Backend** | Node.js + Express.js | Scalable REST API Server |
+| **Database** | MongoDB + Mongoose | Data Persistence & Schema Modeling |
+| **Auth** | Bcrypt & Role-based | Secure User Management |
+| **Deployment** | Vercel | Fast & Reliable Hosting |
 
+---
 
-✅  What I Implemented
-👨‍🏫  Teacher Dashboard
-●	Displays teacher name and total number of slots created
-●	Add new 15-minute time slots by choosing date and time
-●	View all created slots with status: Available or Booked
-●	Prevents past time slots from being added
-●	Prevents overlapping slots automatically
+## ✅ Key Features
 
-👩‍🎓  Student View
-●	See all available (unbooked) slots in a clean list
-●	Book any slot with a single click
-●	Slot status instantly changes to Booked after reservation
+### 👨‍🏫 Teacher Dashboard
+* **Statistics:** View teacher name and total slots created.
+* **Slot Management:** Create 15-minute slots by selecting date and time.
+* **Smart Validation:** Prevents past-time slots and automatic **overlap detection**.
+* **Status Tracking:** Monitor slots labeled as *Available* or *Booked*.
 
-🔐  Auth & Role System
-●	User registers with name, email, password and selects role: Teacher or Student
-●	Role is saved in MongoDB and used to direct user to the correct dashboard
-●	Passwords are hashed with bcrypt before storing — never saved as plain text
-●	Login checks credentials and role, then shows Teacher dashboard or Student view accordingly
+### 👩‍🎓 Student View
+* **Browse:** A clean list of all available (unbooked) slots.
+* **One-Click Booking:** Reserve a session instantly.
+* **Live Updates:** Visual feedback as slot status changes upon reservation.
 
-🧠  Slot Conflict Logic
-●	Every slot is exactly 15 minutes long
-●	On slot creation, server checks all existing slots for time overlap
-●	New slot is rejected if it conflicts with any existing slot window
-●	Both client and server validate that past date/time cannot be used
-🔑  Demo Login Credentials
-You can log in with these pre-created accounts or register a new one and choose your role during signup.
+### 🔐 Authentication System
+* Secure registration with role selection (Teacher/Student).
+* Credentials verification during login to redirect to the appropriate dashboard.
+* Passwords are never stored in plain text.
 
-👨‍🏫  Teacher Account
-Email:      teacher@demo.com
-Password:  12345
+---
 
-👩‍🎓  Student Account
-Email:      student@demo.com
-Password:  12345
+## 🧠 Slot Conflict Logic
+To ensure a smooth scheduling experience, I implemented custom logic:
+1. **Fixed Duration:** Every slot is strictly 15 minutes.
+2. **Server-Side Checks:** Before saving, the server scans MongoDB for any existing slot within that time window.
+3. **Validation:** Both client and server reject attempts to schedule in the past.
 
+---
 
-🔗  Live Links
+## 🔑 Demo Login Credentials
 
-🌐  Live Application	https://scheduleflow-client-1.vercel.app
+If you'd like to test the system quickly, use the following accounts:
 
-💻  Frontend GitHub	https://github.com/Abdul-Kader-Rimon/scheduleflow-client
+| Role | Email | Password |
+| :--- | :--- | :--- |
+| **Teacher** | `teacher@demo.com` | `12345` |
+| **Student** | `student@demo.com` | `12345` |
 
-🛠️  Backend GitHub	https://github.com/Abdul-Kader-Rimon/scheduleflow-server
+---
 
-⚙️  Backend API	https://scheduleflow-server.vercel.app
+### 👨‍💻 Developed by
+**Abdul Kader Rimon**  
+*Full Stack Developer*
