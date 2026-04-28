@@ -43,7 +43,7 @@ ScheduleFlow provides a streamlined experience for educational scheduling. Key h
 ## ✅ Key Features
 
 ### 👨‍🏫 Teacher Dashboard
-* **Displays teacher name and total number of slots created
+* Displays teacher name and total number of slots created
 * **Add new 15-minute time slots by choosing date and time
 * **View all created slots with status: Available or Booked
 * **Prevents past time slots from being added
