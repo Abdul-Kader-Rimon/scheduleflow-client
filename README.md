@@ -1,12 +1,16 @@
 📅  ScheduleFlow
+
 Mini Class Scheduling & Dashboard System
-Internship Assignment Submission
 
 🌐 Live Site
 scheduleflow-client-1.vercel.app	💻 Frontend
+
 github: scheduleflow-client	🛠️ Backend
+
 github: scheduleflow-server	⚙️ API
+
 scheduleflow-server.vercel.app
+
 
 
 📌  Project Overview
